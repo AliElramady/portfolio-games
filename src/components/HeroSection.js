@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section id="home" className="relative flex items-center justify-center h-screen text-white overflow-hidden">
       {/* Animated Gradient Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 animate-gradient-x"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-black to-gray-900 animate-gradient-x"></div>
       </div>
 
       <div className="relative z-10 text-center px-4">
