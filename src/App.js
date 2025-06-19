@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+
 import HeroSection from './components/HeroSection';
 import AboutMe from './components/AboutMe';
 import Skills from './components/Skills';
