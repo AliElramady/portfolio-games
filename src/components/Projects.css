@@ -1,33 +1,92 @@
 /* src/components/Projects.css */
 .project-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
+  padding: 2rem;
 }
 
 .project-card {
-  background: #1a1a1a;
-  padding: 1.5rem;
-  border: 1px solid #333;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 0 10px #00ffff30;
-  transition: 0.3s;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px #00ffff60;
+  transform: translateY(-8px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
 }
 
 .project-card h3 {
-  color: #8a2be2;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .project-card p {
-  color: #ccc;
-  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.project-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-card ul li {
+  margin: 0.5rem 0;
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.project-card ul li::before {
+  content: "•";
+  color: #3498db;
+  position: absolute;
+  left: 0;
+}
+
+.project-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-stack {
+  background: rgba(52, 152, 219, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: #3498db;
+  font-size: 0.9rem;
 }
 
 .project-card a {
-  color: #00ffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.project-card a:hover {
+  background: linear-gradient(135deg, #2980b9 0%, #2174a5 100%);
+  transform: translateX(5px);
+}
+
+.project-card a::after {
+  content: '→';
+  font-size: 1.2rem;
 }

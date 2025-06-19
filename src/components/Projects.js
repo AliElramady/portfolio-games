@@ -2,20 +2,39 @@ import React from 'react';
 import './Projects.css';
 
 const Projects = () => {
+  const projects = [
+    {
+      title: 'Galactic Conquest',
+      description: 'A 3D space combat and strategy game built in Unity. Features dynamic AI, realistic physics, and a compelling story-driven campaign.',
+      techStack: 'Unity, C#, Blender, Photoshop',
+      githubLink: 'https://github.com/AliElramady/GalacticConquest'
+    },
+    {
+      title: 'Shadow Realm',
+      description: 'A 2D action-platformer with a dark fantasy theme, developed using Godot. Features fluid combat, intricate level design, and challenging boss battles.',
+      techStack: 'Godot, GDScript, Aseprite',
+      githubLink: 'https://github.com/AliElramady/ShadowRealm'
+    },
+    {
+      title: 'Pixel Puzzler',
+      description: 'A relaxing puzzle game for mobile devices, built with Unreal Engine. Features hundreds of levels, intuitive controls, and a clean, minimalist art style.',
+      techStack: 'Unreal Engine, C++, Blueprints',
+      githubLink: 'https://github.com/AliElramady/PixelPuzzler'
+    }
+  ];
+
   return (
     <section className="section" id="projects">
       <h2>My Projects</h2>
-      <div className="project-list">
-        <div className="project-card">
-          <h3>Zombie Shooter</h3>
-          <p>Top-down survival shooter built in Unity with custom AI and particle systems.</p>
-          <a href="https://github.com/AliElramady/zombie-shooter" target="_blank" rel="noreferrer">View on GitHub</a>
-        </div>
-        <div className="project-card">
-          <h3>Escape Room VR</h3>
-          <p>Immersive escape room game developed with Unreal Engine and VR support.</p>
-          <a href="https://github.com/AliElramady/escape-vr" target="_blank" rel="noreferrer">View on GitHub</a>
-        </div>
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <div className="project-card" key={index}>
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <p className="tech-stack"><strong>Tech Stack:</strong> {project.techStack}</p>
+            <a href={project.githubLink} className="btn-primary" target="_blank" rel="noreferrer">View on GitHub</a>
+          </div>
+        ))}
       </div>
     </section>
   );
