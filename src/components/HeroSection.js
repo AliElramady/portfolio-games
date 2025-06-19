@@ -12,7 +12,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 text-center px-4">
         <motion.h1 
-          className="text-5xl md:text-7xl font-extrabold mb-4"
+          className="text-5xl md:text-7xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-300"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -33,15 +33,15 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <a href="https://github.com/AliElramady" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
+          <motion.a href="https://github.com/AliElramady" target="_blank" rel="noreferrer" whileHover={{ scale: 1.2, color: '#60a5fa' }} transition={{ type: 'spring', stiffness: 300 }}>
             <FaGithub size={30} />
-          </a>
-          <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
+          </motion.a>
+          <motion.a href="https://linkedin.com/in/your-profile" target="_blank" rel="noreferrer" whileHover={{ scale: 1.2, color: '#60a5fa' }} transition={{ type: 'spring', stiffness: 300 }}>
             <FaLinkedin size={30} />
-          </a>
-          <a href="mailto:your-email@example.com" className="text-gray-400 hover:text-white transition-colors">
+          </motion.a>
+          <motion.a href="mailto:your-email@example.com" whileHover={{ scale: 1.2, color: '#60a5fa' }} transition={{ type: 'spring', stiffness: 300 }}>
             <FaEnvelope size={30} />
-          </a>
+          </motion.a>
         </motion.div>
       </div>
     </section>

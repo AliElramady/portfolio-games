@@ -28,21 +28,28 @@ const AboutMe = () => {
             <img src="https://i.pravatar.cc/300" alt="Ali Elramady" className="rounded-full w-64 h-64 object-cover border-4 border-blue-500" />
           </motion.div>
           <motion.div 
-            className="md:w-2/3 text-lg text-gray-300"
+            className="md:w-2/3 text-lg text-gray-300 leading-relaxed"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <p className="mb-6">
-              I'm a passionate Game Developer with a knack for turning complex ideas into engaging, interactive experiences. With a strong background in both design and development, I love bringing virtual worlds to life through clean, efficient code.
+              I'm a passionate <span className="text-blue-400 font-semibold">Game Developer</span> with a knack for turning complex ideas into engaging, interactive experiences. With a strong background in both <span className="text-blue-400 font-semibold">design and development</span>, I love bringing virtual worlds to life through clean, efficient code.
             </p>
             <p className="font-semibold text-white mb-4">Core Technologies:</p>
-            <div className="flex flex-wrap gap-3">
-              {skills.map(skill => (
-                <span key={skill} className="bg-gray-700 text-blue-300 text-sm font-medium px-4 py-2 rounded-full">
+            <div className="flex flex-wrap gap-4">
+              {skills.map((skill, index) => (
+                <motion.span 
+                  key={index} 
+                  className="bg-gray-700 text-blue-300 font-mono py-2 px-5 rounded-full shadow-lg hover:bg-gray-600 transition-colors duration-300"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.1 * index }}
+                >
                   {skill}
-                </span>
+                </motion.span>
               ))}
             </div>
           </motion.div>

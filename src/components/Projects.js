@@ -42,24 +42,26 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center text-white mb-12">Projects Gallery</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projectData.map((project, i) => (
             <motion.div
               key={project.title}
-              className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300"
+              className="relative bg-gray-800 rounded-lg overflow-hidden shadow-2xl group"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
               custom={i}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: 'spring', stiffness: 300 }}
             >
-              <img src={project.imageUrl} alt={project.title} className="w-full h-56 object-cover" />
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
-                <p className="text-gray-400 mb-4">{project.description}</p>
-                <div className="flex justify-start space-x-4">
-                  <a href={project.liveLink} className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded transition-colors">Live Demo</a>
-                  <a href={project.codeLink} className="text-gray-300 bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded transition-colors">View Code</a>
+              <img src={project.imageUrl} alt={project.title} className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <h3 className="text-2xl font-bold text-white mb-2 text-center">{project.title}</h3>
+                <p className="text-gray-300 mb-4 text-center">{project.description}</p>
+                <div className="flex space-x-4 mt-4">
+                  <a href={project.liveLink} target="_blank" rel="noreferrer" className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors">Live Demo</a>
+                  <a href={project.codeLink} target="_blank" rel="noreferrer" className="bg-gray-700 text-white py-2 px-4 rounded-lg hover:bg-gray-600 transition-colors">Code</a>
                 </div>
               </div>
             </motion.div>
