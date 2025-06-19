@@ -1,16 +1,14 @@
 import React from 'react';
 import './Contact.css';
 
-const Contact = () => (
-  <section className="contact animate-fadein">
-    <h2>تواصل معي</h2>
-    <ul>
-      <li><a href="https://www.linkedin.com/in/fakeprofile" target="_blank" rel="noopener noreferrer"><span role="img" aria-label="LinkedIn">🔗</span> LinkedIn</a></li>
-      <li><a href="https://github.com/fakeprofile" target="_blank" rel="noopener noreferrer"><span role="img" aria-label="GitHub">🐙</span> GitHub</a></li>
-      <li><a href="mailto:fake.email@example.com"><span role="img" aria-label="Email">✉️</span> البريد الإلكتروني</a></li>
-      <li><a href="/cv-fake.pdf" download><span role="img" aria-label="CV">📄</span> تحميل السيرة الذاتية</a></li>
-    </ul>
-  </section>
-);
+const Contact = () => {
+  return (
+    <section className="section" id="contact">
+      <h2>Contact Me</h2>
+      <p>📧 Email: <a href="mailto:ali.elramady.dev@gmail.com">ali.elramady.dev@gmail.com</a></p>
+      <p>🔗 GitHub: <a href="https://github.com/AliElramady" target="_blank" rel="noreferrer">AliElramady</a></p>
+    </section>
+  );
+};
 
-export default Contact; 
+export default Contact;

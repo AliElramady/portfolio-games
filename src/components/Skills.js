@@ -1,17 +1,19 @@
 import React from 'react';
 import './Skills.css';
 
-const Skills = () => (
-  <section className="skills animate-fadein">
-    <h2>مهاراتي التقنية</h2>
-    <ul>
-      <li><strong>Engine:</strong> Unity, Unreal Engine</li>
-      <li><strong>Programming:</strong> C#, C++, Python</li>
-      <li><strong>Tools:</strong> Blender, Photoshop, Figma</li>
-      <li><strong>Version Control:</strong> Git, GitHub</li>
-      <li><strong>Other:</strong> Agile, UI/UX, Game Design</li>
-    </ul>
-  </section>
-);
+const Skills = () => {
+  return (
+    <section className="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Unity / C#</li>
+        <li>Unreal Engine / Blueprints</li>
+        <li>3D Modeling with Blender</li>
+        <li>Game Design Principles</li>
+        <li>Git / GitHub</li>
+      </ul>
+    </section>
+  );
+};
 
-export default Skills; 
+export default Skills;

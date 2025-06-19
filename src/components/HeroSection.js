@@ -1,18 +1,21 @@
+// src/components/HeroSection.js
 import React from 'react';
 import './HeroSection.css';
 
-const HeroSection = () => (
-  <section className="hero-section animate-fadein">
-    <div className="hero-content">
-      <img className="hero-img" src="https://cdn.pixabay.com/photo/2021/01/15/15/08/game-5918664_1280.png" alt="Game Avatar" />
-      <div>
-        <h1>أحمد جيمر</h1>
-        <h2>2D/3D Game Developer & Artist</h2>
-        <p>أصنع عوالم تفاعلية ورسوم متحركة مذهلة باستخدام Unity وUnreal Engine.<br/>شغوف بابتكار تجارب ألعاب لا تُنسى!</p>
-        <a href="#projects" className="hero-btn">شاهد أعمالي</a>
+const HeroSection = () => {
+  return (
+    <section className="hero">
+      <div className="hero-content">
+        <h1>Ali Elramady</h1>
+        <h2>Game Developer</h2>
+        <p>Unity • C# • Unreal Engine • Blender • Game Design</p>
+        <div className="hero-buttons">
+          <a href="#projects" className="btn-primary">🎮 View Projects</a>
+          <a href="#contact" className="btn-secondary">📬 Contact Me</a>
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
-export default HeroSection; 
+export default HeroSection;
