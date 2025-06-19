@@ -45,16 +45,16 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-white mb-12">Technologies & Skills</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">Technologies & Skills</h2>
         <div>
           {Object.entries(skillCategories).map(([category, skills]) => (
             <div key={category} className="mb-12">
-              <h3 className="text-3xl font-bold text-center text-blue-400 mb-8">{category}</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 text-center">
+              <h3 className="text-2xl md:text-3xl font-bold text-center text-blue-400 mb-8">{category}</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8 text-center">
                 {skills.map((skill, i) => (
                   <motion.div
                     key={skill.name}
-                    className="flex flex-col items-center justify-center p-6 bg-gray-700 rounded-xl shadow-lg hover:shadow-blue-400/50 hover:bg-gray-600 transition-all duration-300 transform hover:-translate-y-2"
+                    className="flex flex-col items-center justify-center p-4 md:p-6 bg-gray-700 rounded-xl shadow-lg hover:shadow-blue-400/50 hover:bg-gray-600 transition-all duration-300 transform hover:-translate-y-2"
                     variants={iconVariants}
                     initial="hidden"
                     whileInView="visible"

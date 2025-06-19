@@ -7,7 +7,7 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
         <motion.h2 
-          className="text-4xl font-bold text-center text-white mb-12"
+          className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -17,7 +17,7 @@ const Contact = () => {
         </motion.h2>
         
         <motion.form 
-          className="max-w-2xl mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700/50"
+          className="max-w-2xl mx-auto bg-gray-800 p-6 md:p-8 rounded-xl shadow-2xl border border-gray-700/50"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -41,7 +41,7 @@ const Contact = () => {
           <div className="text-center">
             <motion.button 
               type="submit" 
-              className="text-white bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 font-bold rounded-full text-xl px-12 py-4 transition-all shadow-lg transform hover:scale-105"
+              className="text-white bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 font-bold rounded-full text-lg md:text-xl px-10 py-3 md:px-12 md:py-4 transition-all shadow-lg transform hover:scale-105"
               whileHover={{ scale: 1.1 }}
               transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >
@@ -50,17 +50,17 @@ const Contact = () => {
           </div>
         </motion.form>
         <div className="contact-info mt-16 text-center">
-          <h3 className="text-3xl font-bold text-white mb-8">Or Reach Out Directly</h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-8">Or Reach Out Directly</h3>
           <p className="text-xl text-gray-300 mb-4">Email: <a href="mailto:ali.elramady.dev@gmail.com" className="text-blue-400 hover:underline">ali.elramady.dev@gmail.com</a></p>
-          <div className="flex justify-center items-center space-x-8 mt-8">
+          <div className="flex justify-center items-center space-x-6 md:space-x-8 mt-8">
             <motion.a href="https://github.com/AliElramady" target="_blank" rel="noreferrer" whileHover={{ scale: 1.2, color: '#60a5fa' }} transition={{ type: 'spring', stiffness: 300 }} className="text-gray-400">
-              <FaGithub size={40} />
+              <FaGithub size={32} />
             </motion.a>
             <motion.a href="https://linkedin.com/in/ali-elramady" target="_blank" rel="noreferrer" whileHover={{ scale: 1.2, color: '#60a5fa' }} transition={{ type: 'spring', stiffness: 300 }} className="text-gray-400">
-              <FaLinkedin size={40} />
+              <FaLinkedin size={32} />
             </motion.a>
             <motion.a href="https://twitter.com/yourprofile" target="_blank" rel="noreferrer" whileHover={{ scale: 1.2, color: '#60a5fa' }} transition={{ type: 'spring', stiffness: 300 }} className="text-gray-400">
-              <FaTwitter size={40} />
+              <FaTwitter size={32} />
             </motion.a>
           </div>
         </div>
